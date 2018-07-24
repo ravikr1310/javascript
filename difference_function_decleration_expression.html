@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Program One</title>
+<link href="css/style.css" media="all" rel="Stylesheet" type="text/css" />
+
+<!-- What is a Function Declaration? 
+		A Function Declaration defines a named function variable without requiring variable assignment. Function Declarations occur as standalone constructs and cannot be nested within non-function blocks. It’s helpful to think of them as siblings of Variable Declarations. Just as Variable Declarations must start with “var”, Function Declarations must begin with “function”.e.g.
+		function bar() {
+		    return 3;
+		}
+
+
+
+	What is a Function Expression?
+
+	A Function Expression defines a function as a part of a larger expression syntax (typically a variable assignment ). Functions defined via Functions Expressions can be named or anonymous. Function Expressions must not start with “function” (hence the parentheses around the self invoking example below).
+
+	//anonymous function expression
+	var a = function() {
+	    return 3;
+	}
+	 
+	//named function expression
+	var a = function bar() {
+	    return 3;
+	}
+	 
+	//self invoking function expression
+	(function sayHello() {
+	    alert("hello!");
+	})();	 
+-->
+
+
+</head>
+
+<body>
+
+  <div class="main-container" id="container">    
+    
+  </div>
+
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<!-- <script type="text/javascript" src="js/script.js"></script> -->
+<script type="text/javascript">
+	function foo(){
+	    function bar() {
+	        return 3;
+	    }
+	    	return bar();
+	    function bar() {
+	        return 8;
+	    }
+	}
+	alert(foo());
+
+
+
+	// function foo(){
+	// 	debugger;
+	//     var bar = function() {
+	//         return 3;
+	//     };
+	//     return bar();
+	//     var bar = function() {
+	//         return 8;
+	//     };
+	// }
+	// alert(foo());
+
+
+
+	// alert(foo());
+	// function foo(){
+	// 	debugger;
+	//     var bar = function() {
+	//         return 3;
+	//     };
+	//     return bar();
+	//     var bar = function() {
+	//         return 8;
+	//     };
+	// }
+
+
+
+	// function foo(){
+	// 	debugger;
+	//     return bar();
+	//     var bar = function() {
+	//         return 3;
+	//     };
+
+	//     var bar = function() {
+	//         return 8;
+	//     };
+
+	// }
+	// alert(foo());
+</script>
+</body>
+
+</html>

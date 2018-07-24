@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Array</title>
+<link href="css/style.css" media="all" rel="Stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="myDiv">
+</div>
+
+<script type="text/javascript">
+var arr = Array(4);
+arr[0] = "A";
+arr[1] = "B";
+arr[2] = "C";
+arr[3] = "D";
+var arrLength = arr.length;
+var divObj = document.getElementById("myDiv");
+
+for(var i = 0; i < arrLength; i++){
+	var newDiv = document.createElement("div");
+	newDiv.setAttribute("id", i);
+	newDiv.innerHTML = arr[i];
+	divObj.appendChild(newDiv);
+}
+
+</script>
+
+</body>
+
+</html>

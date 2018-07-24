@@ -1,0 +1,13 @@
+.container{
+	width:50%;
+}
+#box{
+	width:25px;
+	height: 25px;
+	margin:0 auto;
+	border: 1px solid #000;
+	background-color:#ff0000;
+	position: relative;
+	left:0;
+	top:0;
+}
