@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>call method</title>
+<link href="css/style.css" media="all" rel="Stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <div class="main-container" id="container">    
+    
+  </div>
+<script type="text/javascript">
+var obj = {num:90}
+
+var getSum = function(a,b,c){
+	return this.num + a + b + c;
+}
+var arr = [5,2,3];
+console.log(getSum.call(obj,5,2,3));
+console.log(getSum.apply(obj,arr));
+</script>
+</body>
+
+</html>

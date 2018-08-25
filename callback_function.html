@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>callback function</title>
+<link href="css/style.css" media="all" rel="Stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <input type="button" value="Callback Function" onclick="DoProcess(10,20,doSum)"/>
+<script type="text/javascript">
+function DoProcess(a,b,doLeter){
+	alert("Sum: " + (a + b).toString());
+	doLeter(20,20);
+}
+
+function doSum(p,q){
+	alert("Callback Sum:" + (p + q).toString());
+}
+</script>
+</body>
+
+</html>

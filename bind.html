@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>arguments</title>
+<link href="css/style.css" media="all" rel="Stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <div class="main-container" id="container">    
+    
+  </div>
+<script type="text/javascript">
+var obj = {num:3};
+var obj1 = {num:4};
+
+var getTotalVal = function(a,b,c){
+	return this.num + a + b + c;
+}
+var arr = [3,4,5];
+var bound = getTotalVal.bind(obj,obj1);
+console.log(bound(2,3,4));
+</script>
+</body>
+
+</html>

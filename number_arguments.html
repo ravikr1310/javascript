@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>arguments</title>
+<link href="css/style.css" media="all" rel="Stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <div class="main-container" id="container">    
+    
+  </div>
+<script type="text/javascript">
+(function(){
+	var id = document.getElementById("container");
+	var sum = 0;
+	for(var i=0; i < arguments.length; i++){
+		sum += arguments[i];
+		id.innerHTML = sum;
+	}
+	
+})(3,4,6,8,9,0,3,2,4);
+</script>
+</body>
+
+</html>

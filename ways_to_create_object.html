@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ways to create objects</title>
+<link href="css/style.css" media="all" rel="Stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  
+<script type="text/javascript">
+
+	// literal way
+	// single instance
+	// globally share data for whole application
+	var literalWay = {
+		height:100,
+		name:"Ravi",
+		age: 200
+	}
+	alert(literalWay.height + " " + literalWay.name);
+	
+	// constructor way
+	// multiple instance
+	
+	function constructorFun(height,name,age){
+		this.height = height;
+		this.name = name;
+		this.age = age;
+	}
+	var obj = new constructorFun(100,"Ravi",200);
+	alert(obj.height + " " + obj.name + " " + obj.age);
+	var obj1 = new constructorFun(111,"Suraj", 222);
+	alert(obj1.height + " " + obj1.name + " " + obj1.age);
+</script>
+</body>
+
+</html>

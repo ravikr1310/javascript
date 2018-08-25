@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>function can be pass a parameter</title>
+<link href="css/style.css" media="all" rel="Stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <div class="main-container" id="container">    
+    
+  </div>
+<script type="text/javascript">
+function DoProcess1(process1){
+	alert("First");
+	setTimeout(function(){
+		process1();
+	},2000);
+	
+	
+}
+function DoProcess(){
+	alert("Hello");
+}
+
+DoProcess1(DoProcess);
+
+</script>
+</body>
+
+</html>

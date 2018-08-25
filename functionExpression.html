@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>function can be pass a parameter</title>
+<link href="css/style.css" media="all" rel="Stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <input type="button" value="Click me" onclick="f1()"/>
+  <input type="button" value="Click argument" onclick="f2(30,20)"/>
+  <input type="button" value="Mul Arguments" onclick="f3(1,2,3,4,5,6,7,8,9)"/>
+  <input type="button" value="F4" onclick="alert(f4(2,4))"/>
+<script type="text/javascript">
+function f1(){
+	alert("F1");
+}
+
+function f2(a,b){
+	var s = 0;
+	s+= a + b;
+	alert(s.toString());
+}
+
+
+function f3(){
+	var s = 0;
+	
+	for(var i=0; i< arguments.length; i++){
+		s+= arguments[i];
+	}
+	alert("Multiple Arguments" + s.toString());
+}
+function f4(a,b){
+	var s = 0;
+	
+	s+= a + b;
+	return s;
+}
+
+</script>
+</body>
+
+</html>

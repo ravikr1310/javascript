@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>call method</title>
+<link href="css/style.css" media="all" rel="Stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <div class="main-container" id="container">    
+    
+  </div>
+<script type="text/javascript">
+function Job(){
+	this.pays = true;
+}
+
+Job.prototype.print = function(){
+	//console.log(this.pays? 'Yes':'No');
+}
+
+
+function JobTitle(title,pays){
+	this.title = title;
+	this.pays = pays;
+}
+
+
+
+JobTitle.prototype = Object.create(Job.prototype);
+JobTitle.prototype.constructor = JobTitle;
+
+JobTitle.prototype.print = function(){
+	console.log(this.pays ? this.title + 'Javascript' : 'Jquery');
+}
+
+var JobTitle_obj = new JobTitle('Javascript',true);
+//console.log(JobTitle_obj.pays); // from sub class
+//console.log(JobTitle_obj.title); // from child class
+
+console.log(JobTitle_obj.print());
+
+</script>
+</body>
+
+</html>

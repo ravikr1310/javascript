@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>OOPS</title>
+<link href="css/style.css" media="all" rel="Stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <input type="button" value="Closure Function" onclick="closure()"/>
+  
+<script type="text/javascript">
+
+	var glob_var = 100; // global scope
+	function closure(fname,lname,age){ // parent parameters
+		var counter = 0;
+		this.fname = fname;
+		this.lname = lname;
+		this.age = age;
+		var innerFun = function (data){ // own parameters
+			var inner_var = data;
+			var local_var = 200; // local scope
+			counter++;
+			alert("Counter Value: " + counter + " Details: " + fname + " " + lname + " " + age + " " + local_var + " " + glob_var + " " + inner_var);
+		}
+		return {
+			innerFun
+		};
+	}
+	
+	var obj = closure("Ravi","Kumar", 37);
+	obj.innerFun("Sunil");
+	obj.innerFun("Kavita");
+	
+	var obj1 = closure("Manju", "Verma",30);
+	obj1.innerFun("FatehPur");
+	obj1.innerFun("Kolkata");
+</script>
+</body>
+
+</html>

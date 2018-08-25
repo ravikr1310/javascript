@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>OOPS</title>
+<link href="css/style.css" media="all" rel="Stylesheet" type="text/css" />
+<style>
+.para{ display:none;}
+.display_block{ display:block !important;}
+</style>
+</head>
+
+<body>
+
+  <div class="container">
+	<ul>
+		<li>About us
+			<p class="para">About us container</p>
+		</li>
+		<li>Contact us
+			<p class="para">Contact us container</p>
+		</li>
+		<li>Gallery
+			<p class="para">Gallery us container</p>
+		</li>
+		<li>Enguiry
+			<p class="para">Enguiry us container</p>
+		</li>
+	</ul>
+  </div>
+  
+<script type="text/javascript">
+var container_obj = document.getElementsByTagName("li");
+var li_obj = document.getElementsByTagName("p");
+
+//function myFunction(){
+	li_obj[0].style.display = "block";
+	container_obj.onclick(function(){
+		alert("Hello");
+	});
+
+//myFunction();
+
+	
+</script>
+</body>
+
+</html>

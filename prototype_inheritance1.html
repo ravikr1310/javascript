@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>call method</title>
+<link href="css/style.css" media="all" rel="Stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <div class="main-container" id="container">    
+    
+  </div>
+<script type="text/javascript">
+function parent(){
+	this.name = "Ravi";
+	this.address = "Shalimar Bagh";
+	this.getDetails = function(){
+		return this.name + " " + this.address;
+	}
+}
+
+parent.prototype.z = 10;
+
+function child(){
+	//parent.call(this);
+	this.b = 20;
+}
+
+child.prototype = new parent();
+var childObj = new child();
+
+console.log(childObj.name);
+console.log(childObj.address);
+console.log(childObj.getDetails());
+console.log(childObj.b);
+console.log(childObj.z);
+</script>
+</body>
+
+</html>
