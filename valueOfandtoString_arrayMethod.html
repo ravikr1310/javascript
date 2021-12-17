@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ValueOf and toString</title>
+<link href="css/style.css" media="all" rel="Stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <div class="main-container" id="container">    
+    
+  </div>
+<script type="text/javascript">
+// var fruits = ["Banana","Apple","Mango","Fruits","Room","Graps"];
+// var char = "A car, a man, a mango";
+// var arr = [22,54,34,98,12,54,34,22,15];
+// var arr1 = [100,200]
+// var arr2 = [100,200]
+// var newArray = arr.concat(arr1,arr2);
+// document.getElementById('container').innerHTML = arr.slice(1,4);
+// alert(newArray)
+// function NumericSort(value){
+//     value.sort(function(a,b){
+//         return b-a;
+//     })
+//     document.getElementById('container').innerHTML = arr[0];
+// }
+// NumericSort(arr)
+//alert(char)
+// alert(parseInt("hello1234"))
+// var obj = undefined;
+// alert(typeof(obj))
+
+// for(var i=0; i<10; i++){
+//     setTimeout(function(){
+//         console.log(i);
+//     });
+// }
+// for(var i=0; i<5; i++){
+//     debugger;
+//     setInterval(function(){
+//         console.log(i);
+//     });
+// }
+function OuterFunction(fname,lname,age){
+    var counter = 0;
+    var infoDetails = "This is my details";
+    function InnerFunction(){
+        counter ++;
+        var inner_var = 10;
+        console.log(fname, lname,age)      
+    }
+    return {
+        InnerFunction
+    }
+}
+var obj = OuterFunction("Ravi","Kumar",10);
+obj.InnerFunction();
+obj.InnerFunction();
+
+var obj1 = OuterFunction("Kiran","Kumari",20);
+obj1.InnerFunction();
+obj1.InnerFunction();
+</script>
+</body>
+
+</html>
