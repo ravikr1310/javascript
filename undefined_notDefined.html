@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>setTimeout(expression,timeout) and setInterval(expression,timeout);</title>
+<link href="css/style.css" media="all" rel="Stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <input type="button" value="Closure Function" onclick="closure()"/>
+  
+<script type="text/javascript">
+    'use strict'
+let name = "Sunil";
+let lname = "Sarvesh";
+{
+    let a = 100;
+    // let lname = "Ravi";
+    console.log("inside block: ",name)
+    console.log("in block",a);
+    console.log("Last Name:",lname);
+}
+console.log("Out Side Last Name:",lname);
+function Global(){
+    console.log("inside global fun: ",name);
+    let lname = "Sarvesh";
+}
+Global();
+console.log(lname);
+console.log("outside block",a)
+</script>
+</body>
+
+</html>

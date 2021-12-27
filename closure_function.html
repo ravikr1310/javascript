@@ -13,7 +13,7 @@
 <script type="text/javascript">
 
 	var glob_var = 100; // global scope
-	function closure(fname,lname,age){ // parent parameters
+	function Closure(fname,lname,age){ // parent parameters
 		var counter = 0;
 		this.fname = fname;
 		this.lname = lname;
@@ -22,18 +22,18 @@
 			var inner_var = data;
 			var local_var = 200; // local scope
 			counter++;
-			alert("Counter Value: " + counter + " Details: " + fname + " " + lname + " " + age + " " + local_var + " " + glob_var + " " + inner_var);
+			document.write("Counter Value: " + counter + "<br>" + " Details: " + fname + "<br> " + lname + "<br> " + age + "<br> " + local_var + " <br>" + glob_var + "<br> " + inner_var);
 		}
 		return {
 			innerFun
 		};
 	}
 	
-	var obj = closure("Ravi","Kumar", 37);
+	var obj = Closure("Ravi","Kumar", 37);
 	obj.innerFun("Sunil");
 	obj.innerFun("Kavita");
 	
-	var obj1 = closure("Manju", "Verma",30);
+	var obj1 = Closure("Manju", "Verma",30);
 	obj1.innerFun("FatehPur");
 	obj1.innerFun("Kolkata");
 </script>

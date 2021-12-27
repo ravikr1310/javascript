@@ -11,11 +11,13 @@
   <input type="button" value="Callback Function" onclick="DoProcess(10,20,doSum)"/>
 <script type="text/javascript">
 function DoProcess(a,b,doLeter){
+	debugger
 	alert("Sum: " + (a + b).toString());
 	doLeter(20,20);
 }
 
 function doSum(p,q){
+	debugger
 	alert("Callback Sum:" + (p + q).toString());
 }
 </script>

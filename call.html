@@ -12,14 +12,28 @@
     
   </div>
 <script type="text/javascript">
-var obj = {num:90}
+// var obj = {num:90}
 
-var getSum = function(a,b,c){
-	return this.num + a + b + c;
+// var getSum = function(a,b,c){
+// 	return this.num + a + b + c;
+// }
+// var arr = [5,2,3];
+// console.log(getSum.call(obj,5,2,3));
+// console.log(getSum.apply(obj,arr));
+
+const user = {
+  fname:"ravi",
+  lname:"kumar"
 }
-var arr = [5,2,3];
-console.log(getSum.call(obj,5,2,3));
-console.log(getSum.apply(obj,arr));
+const arr = [100,200,300];
+const userDetails = {
+  age:100,
+  userFullname: function(msg,a,b,c){
+    return msg + " " + this.fname + " " + this.lname + " " + a+b+c;
+  }
+}
+console.log(userDetails.userFullname.call(user,'Hello'),100,200,300);
+console.log(userDetails.userFullname.apply(user,['Hello'], arr))
 </script>
 </body>
 

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Animation in javascript</title>
+<link href="css/style.css" media="all" rel="Stylesheet" type="text/css" />
+
+</head>
+
+<body>
+
+  <div class="main-container" id="box">  
+      this is div element  
+    <p>
+        this is paragraph
+        <span>
+            this is span
+        </span>
+    </p>
+  </div>
+
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<!-- <script type="text/javascript" src="js/prototype_based.js"></script>
+<script type="text/javascript" src="js/shell.js"></script> -->
+<script>
+    $(document).ready(function(){
+        $('span').click(function(event){            
+            alert("this is span element")
+        });
+        $('p').click(function(event){
+            event.stopPropagation();
+            alert("this is p element")
+        });
+        $('div').click(function(event){            
+            alert("this is div element")
+        });
+    });
+</script>
+
+</body>
+
+</html>

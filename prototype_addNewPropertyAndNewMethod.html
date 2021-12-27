@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Filter</title>
+</head>
+
+<body>
+
+    <script type="text/javascript">
+        var emp = {
+            name: "Ravi",
+            age: 20,
+            jobTitle: "SEng"
+        }
+
+        function Employee(data) {
+            this.name = data.name;
+            this.age = data.age;
+            this.jobTitle = data.jobTitle;
+        }       
+
+        // Add property and method to the object
+        var EmpObj = new Employee(emp);
+        Employee.prototype.salary = null;
+        EmpObj.salary = 20000;
+        Employee.prototype.details = {};
+        EmpObj.details = {
+            fullName : "Kiran Kumari",            
+        }
+        console.log(EmpObj.salary + " " + EmpObj.name + " " + EmpObj.age);
+        console.log(EmpObj.details.fullName)
+
+        // Inheritance using prototype
+        function Company(){
+            this.cName = "TCS";
+            this.location ="Gurgaon";
+        }
+
+        Company.prototype = new Employee(emp);
+        var ComObj = new Company();
+
+        console.log(ComObj.name + " " + ComObj.cName)
+    </script>   
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Map</title>
+</head>
+
+<body>
+  
+<script type="text/javascript">
+ "use strict";
+//  // encaptulation public
+// function connection(publicValue){
+//     alert(publicValue);
+// }
+// // encaptulation public
+// function httpConnection(publicValue1){
+//     alert(publicValue1); 
+// }
+
+// // abstraction public
+// const submit = function(val1,val2){ 
+//     connection(val1);
+//     httpConnection(val2);
+//     alert("This is public value");
+// }
+// console.log(submit("100","200"));
+
+// polymorphism
+// all employee are people, but all people are not employee
+// people super class and employee subclass
+// people have weight and ages but they donnt have salaries.
+
+function People(age, weight){
+    this.age = age;
+    this.weight = weight;
+}
+
+function Employee(age,weight,salary){
+    this.age = age;
+    this.weight = weight;
+    this.salary = salary;
+}
+
+
+People.prototype.getInfo = function(){
+    return this.age + " " + this.weight;
+}
+
+Employee.prototype.getInfo = function(){
+    return this.age + " " + this.weight + " " + this.salary;
+}
+
+var peopleObj = new People(23,30);
+var employeeObj = new Employee(76,89,59000);
+
+console.log(peopleObj.getInfo()); // different form with single action
+console.log(employeeObj.getInfo()); // different form with single action
+
+</script>
+</body>
+
+</html>

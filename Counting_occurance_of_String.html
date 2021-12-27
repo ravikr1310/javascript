@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Map</title>
+</head>
+
+<body>
+  
+<script type="text/javascript">
+ var str = "Ram sham ram sham";
+ var foundPosition = 0;
+ var countString = 0;
+function CountingString(data){
+    while(foundPosition != -1){
+        foundPosition = data.indexOf("Ram", foundPosition);
+        if(foundPosition != -1){
+            foundPosition++;
+            countString ++
+        }       
+    }
+    console.log(foundPosition,countString);
+}
+console.log(CountingString(str));
+</script>
+</body>
+
+</html>

@@ -13,3 +13,17 @@
 }
 .para{ display:none;}
 .display_block{ display:block !important;}
+
+.transectin{
+	width: 200px;
+	height: 200px;
+	border: 1px solid black;
+	transition: width 2s, height 2s,background-color 2s;	
+}
+
+div.transectin:hover{
+	width:400px;
+	background-color: red;
+	transition-delay: 1s;
+	transition-duration: 2s;
+}
