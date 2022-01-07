@@ -30,20 +30,30 @@
   </div>
   
 <script type="text/javascript">
-	// Capitalized first letter of words
-	var str = "my name is ravi kumar";
+	// Capitalized first letter of element of array
+	var str = [
+		{
+			id:1,
+			name:"apple"
+		},
+		{
+			id:2,
+			name:"mango"
+		},
+		{
+			id:3,
+			name:"orange"
+		}
+	];
 	var firstElement = [];
 	var newArray = [];
-	var contertedString = "";
 	function FirstLetterCapital(value){
-		newArray = value.split(' ');
-		for(var i = 0; i < newArray.length; i++){
-			firstElement[i] = newArray[i].charAt(0).toUpperCase() + newArray[i].substring(1,newArray[i].length);
-			contertedString = firstElement.join(" ");
-		}
+		for(var i = 0; i < value.length; i++){
+			newArray[i] = value[i].name.charAt(0).toUpperCase() + value[i].name.substring(1,value[i].name.length);
+		}		
 	}
 	FirstLetterCapital(str);
-	console.log(contertedString)
+	console.log(newArray)
 </script>
 </body>
 
